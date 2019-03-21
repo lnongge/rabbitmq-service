@@ -1,2 +1,2 @@
 # rabbitmq-service
-rabbitmq practice demo
+rabbitmq 教程练习代码
