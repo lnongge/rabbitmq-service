@@ -28,7 +28,13 @@ public class RabbitmqSpringApplicationTests {
 	
 	@Autowired
     private RabbitAdmin rabbitAdmin;
-	
+	/**
+	 * @Description rabbitAdmin的使用demo
+	 * @Param []
+	 * @return void
+	 * @Date 16:39 2019/3/25
+	 * @Author lianws
+	 **/
 	@Test
 	public void testAdmin() throws Exception{
         /**
@@ -62,7 +68,13 @@ public class RabbitmqSpringApplicationTests {
     }
     @Autowired
     private RabbitTemplate rabbitTemplate;
-	
+	/**
+	 * @Description rabbitTemplate使用示例demo
+	 * @Param []
+	 * @return void
+	 * @Date 16:39 2019/3/25
+	 * @Author lianws
+	 **/
 	@Test
     public void testSendMessage1(){
 	    MessageProperties properties=new MessageProperties();
@@ -100,7 +112,13 @@ public class RabbitmqSpringApplicationTests {
         rabbitTemplate.send("topic001", "spring.send", message);
         rabbitTemplate.send("topic002", "rabbit.send", message);
     }
-	
+	/**
+	 * @Description 各种转换器示例demo
+	 * @Param []
+	 * @return void
+	 * @Date 16:40 2019/3/25
+	 * @Author lianws
+	 **/
     @Test
     public void testSendJsonMessage() throws  Exception{
         Order order=new Order();
@@ -117,7 +135,6 @@ public class RabbitmqSpringApplicationTests {
         
         rabbitTemplate.send("topic001","spring.order",message);
     }
-
     @Test
     public void testSendJavaMessage() throws Exception {
         Order order = new Order();
