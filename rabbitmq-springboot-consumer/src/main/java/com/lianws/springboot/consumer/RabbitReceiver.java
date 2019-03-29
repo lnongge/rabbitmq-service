@@ -58,7 +58,7 @@ public class RabbitReceiver {
                                Channel channel) throws Exception {
         System.out.println("------------springboot consumer------------");
         System.out.println("消费端order:" + order.getId()+",orderName:"+order.getName());
-        Long deliveryTag = (Long) headers.get(AmqpHeaders.DELIVERY_TAG);
+        Long deliveryTag = (Long) headers.get(AmqpHeaders.DELIVERY_TAG); 
         //手工签收
         channel.basicAck(deliveryTag, false);
 

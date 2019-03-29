@@ -19,6 +19,8 @@
         <module>rabbitmq-spring</module>
         <module>rabbitmq-springboot-consumer</module>
         <module>rabbitmq-springboot-producer</module>
+        <module>rabbitmq-springcloudstream-consumer</module>
+        <module>rabbitmq-springcloudstream-producer</module>
     </modules>
 	<properties>
 		<java.version>1.8</java.version>
